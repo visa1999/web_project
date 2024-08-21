@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced To-Do List</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Advanced To-Do List</h1>
+        <h2>Exam: Software Engineering</h2>
+        <h3>Professor: Besnik Selimi</h3>
+        <h3>Student: Visar Abdullahu</h3>
+        <h3>University: South East European University - Tetovo, Macedonia</h3>
+        <input type="text" id="taskInput" placeholder="Enter a new task...">
+        <input type="date" id="dueDateInput">
+        <select id="categoryInput">
+            <option value="Work">Work</option>
+            <option value="Personal">Personal</option>
+            <option value="Shopping">Shopping</option>
+        </select>
+        <select id="priorityInput">
+            <option value="High">High</option>
+            <option value="Medium">Medium</option>
+            <option value="Low">Low</option>
+        </select>
+        <button onclick="addTask()">Add Task</button>
+        
+        <div class="filter-section">
+            <input type="text" id="searchInput" placeholder="Search tasks..." oninput="filterTasks()">
+            <select id="filterCategoryInput" onchange="filterTasks()">
+                <option value="All">All Categories</option>
+                <option value="Work">Work</option>
+                <option value="Personal">Personal</option>
+                <option value="Shopping">Shopping</option>
+            </select>
+            <select id="filterStatusInput" onchange="filterTasks()">
+                <option value="All">All Statuses</option>
+                <option value="Pending">Pending</option>
+                <option value="Completed">Completed</option>
+            </select>
+        </div>
+
+        <ul id="taskList"></ul>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
